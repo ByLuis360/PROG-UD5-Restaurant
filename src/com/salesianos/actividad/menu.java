@@ -39,4 +39,13 @@ public class Menu {
             }
         }
     }
+
+    public static void dropRestaurant(String name){
+        for (Restaurante restaurant : RESTAURANTS) {
+            if (restaurant.getName().equalsIgnoreCase(name)) {
+                RESTAURANTS.remove(restaurant);
+            }
+        }
+    }
+
 }
