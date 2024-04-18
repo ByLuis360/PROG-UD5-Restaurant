@@ -2,15 +2,19 @@ package com.salesianos.actividad;
 
 import java.util.ArrayList;
 
+
 import javax.swing.JOptionPane;
 
-public class Menu {
+public class menu {
+
+
     private static final ArrayList<Restaurante> RESTAURANTS = new ArrayList<>();
 
     public static void addRestaurant(Restaurante newRestaurant){
         RESTAURANTS.add(newRestaurant);
     }
     
+
 
     public static Restaurante setInfoToNewRestaurant(){
         String name = JOptionPane.showInputDialog("Introduzca el nombre del restaurante a añadir:");
