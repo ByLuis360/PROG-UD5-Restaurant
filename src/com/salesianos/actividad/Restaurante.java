@@ -45,5 +45,11 @@ public class Restaurante {
         this.score = score;
     }
 
-    
+    @Override
+    public String toString() {
+        String message = "El nombre del restaurante es " + this.name + ", se encuentra en " + this.place
+                + " y el horario para ir al restaurante es de " + this.schedule
+                + ". Este restaurnate ha recibidio una puntuación de " + this.score;
+        return message;
+    }
 }
