@@ -36,7 +36,7 @@ public class App {
                     Menu.dropRestaurant(restaurantNameToDelete);
                     break;
                 case "Q":
-
+                    keepAsking = false;
                     break;
 
                 default:
