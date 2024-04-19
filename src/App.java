@@ -23,14 +23,15 @@ public class App {
                     Menu.addRestaurant(newRestaurant);
                     break;
                 case "2":
-                    String name = JOptionPane.showInputDialog("Introduzca el nombre del restaurante a modificar: ");
-                    Menu.modifyRestaurant(name);
+                    String restaurantNameToEdit = JOptionPane.showInputDialog("Introduzca el nombre del restaurante a modificar: ");
+                    Menu.modifyRestaurant(restaurantNameToEdit);
                     break;
                 case "3":
                     Menu.showRestaurantsSortedByScore();
                     break;
                 case "4":
-
+                String restaurantNameToDelete = JOptionPane.showInputDialog("Introduzca el nombre del restaurante que quiera borrar: ");
+                Menu.dropRestaurant(restaurantNameToDelete);
                     break;
                 case "Q":
 
