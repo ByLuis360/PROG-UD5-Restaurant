@@ -27,7 +27,7 @@ public class App {
                     Menu.modifyRestaurant(name);
                     break;
                 case "3":
-
+                    Menu.showRestaurantsSortedByScore();
                     break;
                 case "4":
 
