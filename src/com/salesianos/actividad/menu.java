@@ -49,7 +49,8 @@ public class Menu {
                 (restaurant, otherRestaurant) -> Double.compare(otherRestaurant.getScore(), restaurant.getScore()));
         String message = "-------------------------------------------------------------------- \n";
         for (Restaurante restaurant : RESTAURANTS) {
-            message += restaurant.toString() + "\n -------------------------------------------------------------------- \n";
+            message += restaurant.toString()
+                    + "\n -------------------------------------------------------------------- \n";
         }
         JOptionPane.showMessageDialog(null, message);
     }
