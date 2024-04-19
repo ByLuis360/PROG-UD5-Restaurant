@@ -8,11 +8,7 @@ import javax.swing.JOptionPane;
 public class Menu {
     private static final ArrayList<Restaurante> RESTAURANTS = new ArrayList<>();
 
-    public static void addRestaurant(Restaurante newRestaurant) {
-        RESTAURANTS.add(newRestaurant);
-    }
-
-    public static Restaurante setInfoToNewRestaurant() {
+    public static void addRestaurant() {
         String name = JOptionPane.showInputDialog("Introduzca el nombre del restaurante a añadir:");
         String place = JOptionPane.showInputDialog("Introduzca el lugar del restaurante a añadir:");
         String schedule = JOptionPane.showInputDialog("Introduzca el horario que tendrá el restaurante a añadir:");
@@ -22,7 +18,8 @@ public class Menu {
 
         Restaurante newRestaurant = new Restaurante(name, place, schedule, originalScore);
 
-        return newRestaurant;
+        RESTAURANTS.add(newRestaurant);
+
     }
 
     public static void modifyRestaurant(String name) {
