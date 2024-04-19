@@ -5,7 +5,7 @@ import java.util.Collections;
 
 import javax.swing.JOptionPane;
 
-public class menu {
+public class Menu {
 
 
     private static final ArrayList<Restaurante> RESTAURANTS = new ArrayList<>();
