@@ -1,7 +1,6 @@
 import javax.swing.JOptionPane;
 
 import com.salesianos.actividad.Menu;
-import com.salesianos.actividad.Restaurante;
 
 public class App {
     public static void main(String[] args) {
@@ -19,8 +18,7 @@ public class App {
             option = JOptionPane.showInputDialog(menu);
             switch (option) {
                 case "1":
-                    Restaurante newRestaurant = Menu.setInfoToNewRestaurant();
-                    Menu.addRestaurant(newRestaurant);
+                    Menu.addRestaurant();
                     break;
                 case "2":
                     String restaurantNameToEdit = JOptionPane
