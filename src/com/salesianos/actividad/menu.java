@@ -49,9 +49,12 @@ public class Menu {
     public static void showRestaurantsSortedByScore() {
         Collections.sort(RESTAURANTS,
                 (restaurant, otherRestaurant) -> Double.compare(otherRestaurant.getScore(), restaurant.getScore()));
-        for (Restaurante restaurante : RESTAURANTS) {
-            JOptionPane.showMessageDialog(null, restaurante);
+        String message = "-------------------------------------------------------------------- \n";
+        for (Restaurante restaurant : RESTAURANTS) {
+            message += restaurant.toString()
+                    + "\n -------------------------------------------------------------------- \n";
         }
+        JOptionPane.showMessageDialog(null, message);
     }
 
     public static void dropRestaurant(String name) {
