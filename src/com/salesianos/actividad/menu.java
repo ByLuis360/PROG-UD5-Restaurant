@@ -40,6 +40,8 @@ public class Menu {
                         .showInputDialog("Introduce la nueva puntuación que se le ha dado al restaurante");
                 double realScore = Integer.parseInt(newScore);
                 restaurant.setScore(realScore);
+            } else {
+                JOptionPane.showMessageDialog(null, "Lo siento el restaurante que busca no existe");
             }
         }
     }
