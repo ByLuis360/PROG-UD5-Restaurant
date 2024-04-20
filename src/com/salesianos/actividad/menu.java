@@ -28,13 +28,18 @@ public class Menu {
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
-        String score = JOptionPane
-                .showInputDialog("Introduce la puntuación que le han puesto al restaurante a añadir:");
-        double originalScore = Integer.parseInt(score);
+        try {
+            String score = JOptionPane
+                    .showInputDialog("Introduce la puntuación que le han puesto al restaurante a añadir:");
+            double originalScore = Integer.parseInt(score);
+            Restaurante newRestaurant = new Restaurante(name, place, schedule, originalScore);
 
-        Restaurante newRestaurant = new Restaurante(name, place, schedule, originalScore);
+            RESTAURANTS.add(newRestaurant);
 
-        RESTAURANTS.add(newRestaurant);
+        } catch (java.lang.NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Error por poner un valor String que no sea un número", "error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
 
     }
 
@@ -62,10 +67,16 @@ public class Menu {
                     return;
                 }
                 restaurant.setSchedule(newSchedule);
-                String newScore = JOptionPane
-                        .showInputDialog("Introduce la nueva puntuación que se le ha dado al restaurante");
-                double realScore = Integer.parseInt(newScore);
-                restaurant.setScore(realScore);
+                try {
+                    String newScore = JOptionPane
+                            .showInputDialog("Introduce la nueva puntuación que se le ha dado al restaurante");
+                    double realScore = Integer.parseInt(newScore);
+                    restaurant.setScore(realScore);
+
+                } catch (java.lang.NumberFormatException e) {
+                    JOptionPane.showMessageDialog(null, "Error por poner un valor String que no sea un número", "error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
             } else {
                 JOptionPane.showMessageDialog(null, "Lo siento el restaurante que busca no existe");
             }
